@@ -14,4 +14,9 @@ class Post extends Model
 
     // kebalikan dari fillable (yang tidak boleh diisi)
     protected $guarded = ['id'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
