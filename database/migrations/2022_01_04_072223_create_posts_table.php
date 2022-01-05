@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             //Menyimpan sebagian kecil dari text body blog
+            $table->string('slug')->unique();
             $table->text('excerpt');
             $table->text('body');
             $table->timestamp('published_at')->nullable();
