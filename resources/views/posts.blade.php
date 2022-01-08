@@ -7,7 +7,7 @@
             <a href="/blog/{{ $post->slug }}" class="text-decoration-none">{{ $post->title }}</a>
         </h2>
         <p>
-            By: <a href="#" class="text-decoration-none">{{ $post->user->name }}</a> <br>
+            By: <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> <br>
             Category: 
             <a href="/categories/{{ $post->category->slug  }}" class="text-decoration-none">{{ $post->category->name }}</a>
         </p>
