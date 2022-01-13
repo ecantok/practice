@@ -14,6 +14,7 @@ class Post extends Model
 
     // kebalikan dari fillable (yang tidak boleh diisi)
     protected $guarded = ['id'];
+    protected $with = ['category', 'author'];
 
     public function category()
     {
