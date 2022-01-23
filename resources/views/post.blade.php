@@ -8,7 +8,7 @@
             <div class="col-md-8">
                 <h1 class="mb-3">{{ $post->title }}</h1>
                 <p>
-                    <h6>By: <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a></h6>
+                    <h6>By: <a href="/blog?author{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a></h6>
                     <h6>Category: <a href="/blog?category={{ $post->category->slug  }}" class="text-decoration-none">{{ $post->category->name }}</a></h6>
                 </p>
 
