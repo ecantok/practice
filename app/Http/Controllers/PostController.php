@@ -12,10 +12,8 @@ class PostController extends Controller
         return view('posts', [
             'title' => 'All Posts',
             'active' => 'posts',
-            // 'posts' => Post::all()
-
             //Check Post model
-            'posts' => Post::latest()->get()
+            'posts' => Post::latest()->filter(request(['search', 'category']))->get()
         ]);
     }
 
